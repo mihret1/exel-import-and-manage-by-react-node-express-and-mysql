@@ -11,7 +11,7 @@ const sequelize=new Sequelize(dbConfig.DATABASE,dbConfig.USER,dbConfig.PASSWORD,
 const db={};
 db.sequelize=sequelize;
 db.models={}
-db.models.User=require('./user')(sequelize,Sequelize.DataTypes)
+db.models.Table=require('./tableModel')(sequelize,Sequelize.DataTypes)
 
 module.exports=db
 
